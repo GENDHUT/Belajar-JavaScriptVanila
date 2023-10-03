@@ -1,0 +1,204 @@
+:root {
+    --sizeVar: 0.2vmin;
+  }
+  input {
+    display: none;
+  }
+  input + label:hover .animDiv {
+    animation-name: none;
+  }
+  input + label:active .animDiv {
+    pointer-events: none;
+  }
+  .baseElem {
+    position: absolute;
+    width: calc(var(--sizeVar) * 140);
+    height: calc(var(--sizeVar) * 140);
+    border-radius: calc(var(--sizeVar) * 40);
+    background: #69d2e7;
+    background: linear-gradient(
+      180deg,
+      rgba(105, 210, 231, 1) 50%,
+      rgba(79, 166, 183, 1) 100%
+    );
+    top: calc(50% - calc(var(--sizeVar) * 70));
+    left: calc(50% - calc(var(--sizeVar) * 70));
+    transform-origin: bottom center;
+    animation: baseAnim 1500ms linear;
+  }
+  .jumpElem {
+    position: absolute;
+    width: calc(var(--sizeVar) * 40);
+    height: calc(var(--sizeVar) * 40);
+    border-radius: calc(var(--sizeVar) * 12);
+    background: #fa6900;
+    background: linear-gradient(
+      180deg,
+      rgba(250, 105, 0, 1) 70%,
+      rgba(196, 86, 7, 1) 100%
+    );
+    bottom: 100%;
+    left: calc(50% - calc(var(--sizeVar) * 20));
+    animation: jumpAnim 1500ms linear;
+  }
+  .tagline {
+    position: absolute;
+    top: calc(50% + calc(var(--sizeVar) * 100));
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc(var(--sizeVar) * 20);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ffffff;
+  }
+  body {
+    overflow: hidden;
+    background-color: #24484f;
+  }
+  
+  @keyframes jumpAnim {
+    0% {
+      transform: scale(1, 1) translateY(0) rotate(0);
+      background: linear-gradient(
+        180deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    7% {
+      transform: scale(1.2, 0.9) translateY(10%) rotate(0);
+      background: linear-gradient(
+        180deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    15% {
+      transform: scale(0.5, 1.6) translateY(-20%) rotate(0);
+      background: linear-gradient(
+        180deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    23% {
+      transform: scale(1, 1) translateY(-150%) rotate(90deg);
+      background: linear-gradient(
+        90deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    27% {
+      transform: scale(1, 1) translateY(-150%) rotate(90deg);
+      background: linear-gradient(
+        90deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+  
+    35% {
+      transform: scale(0.5, 1.6) translateY(-20%) rotate(180deg);
+      background: linear-gradient(
+        0deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    43% {
+      transform: scale(1.2, 0.9) translateY(10%) rotate(180deg);
+      background: linear-gradient(
+        0deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    50% {
+      transform: scale(1, 1) translateY(0) rotate(180deg);
+      background: linear-gradient(
+        0deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+    100% {
+      transform: scale(1, 1) translateY(0) rotate(180deg);
+      background: linear-gradient(
+        0deg,
+        rgba(250, 105, 0, 1) 70%,
+        rgba(196, 86, 7, 1) 100%
+      );
+    }
+  }
+  
+  @keyframes baseAnim {
+    0% {
+      transform: scale(1, 1);
+    }
+    7% {
+      transform: scale(1.1, 0.95);
+    }
+    16% {
+      transform: scale(0.9, 1.2);
+    }
+    23% {
+      transform: scale(1, 1);
+    }
+    27% {
+      transform: scale(1, 1);
+    }
+    35% {
+      transform: scale(1, 1);
+    }
+    43% {
+      transform: scale(1.1, 0.95);
+    }
+    50% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+
+/* navbar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+	color: #0000ff; /* Ubah warna teks menjadi biru gelap */
+	padding: 20px;
+	display: flex;
+	justify-content: center; /* Pusatkan teks horizontal */
+	align-items: center; /* Pusatkan teks vertikal */
+	z-index: 100;
+	transform-style: preserve-3d;
+	box-sizing: border-box;
+	--cbz: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  /* Hapus garis bawah pada tautan */
+  .navbar a {
+	text-decoration: none;
+	color: #f55d5d; /* Ubah warna tautan menjadi biru gelap */
+	margin: 0 10px; /* Beri jarak antara tautan */
+	font-size: 20px; /* Ubah ukuran tulisan sesuai kebutuhan Anda */
+
+  }
+  
+  /* Gaya tengahkan teks di navbar */
+  .nav-center {
+	display: flex;
+	align-items: center;
+  }
+
+  /* Gaya isi konten */
+.content {
+  margin-top: 80px; /* Berikan margin atas agar isi konten tidak terlalu mengenai navbar */
+  padding: 20px; /* Berikan padding agar konten tetap terlihat baik */
+}

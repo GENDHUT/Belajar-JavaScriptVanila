@@ -1,0 +1,56 @@
+html {
+    overflow: hidden;
+    height: 100%;
+    background: #191919;
+    width: 100%;
+}
+
+#canvas {
+    background: url('https://marclopezavila.github.io/planet-defense-game/img/space.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#canvas.playing {
+    cursor: url('https://marclopezavila.github.io/planet-defense-game/img/aim_red.png') 17.5 17.5,auto !important;
+}
+
+
+/* navbar */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: transparent;
+	color: #0000ff; /* Ubah warna teks menjadi biru gelap */
+	padding: 20px;
+	display: flex;
+	justify-content: center; /* Pusatkan teks horizontal */
+	align-items: center; /* Pusatkan teks vertikal */
+	z-index: 100;
+	transform-style: preserve-3d;
+	box-sizing: border-box;
+	--cbz: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  /* Hapus garis bawah pada tautan */
+  .navbar a {
+	text-decoration: none;
+	color: #f55d5d; /* Ubah warna tautan menjadi biru gelap */
+	margin: 0 10px; /* Beri jarak antara tautan */
+	font-size: 20px; /* Ubah ukuran tulisan sesuai kebutuhan Anda */
+
+  }
+  
+  /* Gaya tengahkan teks di navbar */
+  .nav-center {
+	display: flex;
+	align-items: center;
+  }
+  /* Gaya isi konten */
+.content {
+    margin-top: 80px; /* Berikan margin atas agar isi konten tidak terlalu mengenai navbar */
+    padding: 20px; /* Berikan padding agar konten tetap terlihat baik */
+  }
